@@ -1,7 +1,7 @@
 # Culture Event
 
 <p align="center">
-  <img src="./client/src/assets/images/logo.png" alt="Culture Event Logo" width="140" />
+  <img src="logo.png" alt="Culture Event Logo" width="140" />
 </p>
 
 <h1 align="center">Culture Event</h1>
