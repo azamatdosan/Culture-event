@@ -1,0 +1,54 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Размеры */
+.btn-small { padding: 6px 12px; font-size: 0.85rem; }
+.btn-medium { padding: 10px 20px; font-size: 1rem; }
+.btn-large { padding: 14px 28px; font-size: 1.15rem; }
+
+/* Варианты цвета (согласно критериям "Гармоничная схема") */
+.btn-primary {
+  background-color: #0056b3;
+  color: white;
+}
+.btn-primary:hover:not(:disabled) { background-color: #004494; }
+
+.btn-secondary {
+  background-color: #e9ecef;
+  color: #333;
+}
+.btn-secondary:hover:not(:disabled) { background-color: #dde2e6; }
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-danger:hover:not(:disabled) { background-color: #c82333; }
+
+/* Анимация загрузки внутри кнопки */
+.btn-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: btn-spin 0.8s linear infinite;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}

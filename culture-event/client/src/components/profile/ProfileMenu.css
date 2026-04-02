@@ -1,0 +1,46 @@
+.profile-menu {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-menu-list li a,
+.profile-logout-btn {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile-menu-list li a:hover,
+.profile-menu-list li a.active {
+  background-color: #f0f4f8;
+  color: #0056b3;
+  border-left: 4px solid #0056b3;
+}
+
+.profile-logout-btn {
+  color: #dc3545;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.profile-logout-btn:hover {
+  background-color: #fff5f5;
+  color: #bd2130;
+}

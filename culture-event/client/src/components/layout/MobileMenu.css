@@ -1,0 +1,121 @@
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(17, 17, 17, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+.mobile-menu__panel {
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  padding: 22px 18px;
+  background-color: #ffffff;
+  box-shadow: -12px 0 30px rgba(17, 17, 17, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.mobile-menu__logo {
+  color: #111111;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.mobile-menu__close {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  color: #111111;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-menu__nav a {
+  padding: 14px 16px;
+  border-radius: 14px;
+  color: #111111;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-menu__nav a:hover {
+  background-color: #f7f7f7;
+}
+
+.mobile-menu__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.mobile-menu__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 14px;
+  background-color: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobile-menu__button--admin {
+  background-color: #caa84a;
+  color: #111111;
+}
+
+.mobile-menu__button--logout {
+  background-color: #d64545;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu__panel {
+    max-width: 100%;
+    padding: 18px 14px;
+  }
+
+  .mobile-menu__logo {
+    font-size: 18px;
+  }
+
+  .mobile-menu__nav a,
+  .mobile-menu__button {
+    min-height: 46px;
+    font-size: 14px;
+  }
+}

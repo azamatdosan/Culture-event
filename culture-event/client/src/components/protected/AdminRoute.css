@@ -1,0 +1,14 @@
+/* Переиспользуем стили лоадера, чтобы не дублировать код, 
+   но оставляем отдельный файл для масштабируемости (правильная архитектура) */
+.admin-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: #dc3545; /* Красный оттенок для админских проверок */
+}
+
+.admin-loader .spinner {
+  border-top-color: #dc3545;
+}

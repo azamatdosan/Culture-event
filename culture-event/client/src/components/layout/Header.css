@@ -1,0 +1,289 @@
+/* =========================================
+   БЕЛАЯ МИНИМАЛИСТИЧНАЯ ШАПКА
+========================================= */
+
+.main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    /* Тонкая элегантная линия вместо тени */
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Логотип */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.logo-area:hover .logo-image {
+    opacity: 0.8;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    color: #0f172a;
+    /* Глубокий темно-синий */
+}
+
+
+/* Центральное меню */
+
+.center-nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    color: #64748b;
+    /* Спокойный серый для контраста */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding-bottom: 4px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #0f172a;
+}
+
+.nav-link.active {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0f172a;
+    border-radius: 2px;
+}
+
+
+/* Правая часть (Кнопки) */
+
+.right-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.auth-user-section,
+.guest-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+
+.avatar-link:hover {
+    border-color: #0f172a;
+}
+
+.user-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Базовые стили кнопок */
+
+.auth-btn,
+.guest-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    /* Более строгие, почти прямые углы */
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+
+/* Кнопка ВЫЙТИ */
+
+.logout-btn {
+    background: #f8fafc;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+}
+
+.logout-btn:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+
+/* Кнопка ВОЙТИ */
+
+.login-btn {
+    color: #0f172a;
+    background: transparent;
+    border: 1px solid #0f172a;
+    /* Контурная кнопка */
+}
+
+.login-btn:hover {
+    background: #f8fafc;
+}
+
+
+/* Кнопка ЗАРЕГИСТРИРОВАТЬСЯ */
+
+.register-btn {
+    background: #0f172a;
+    /* Чисто темно-синий */
+    color: #ffffff !important;
+    border: 1px solid #0f172a;
+}
+
+.register-btn:hover {
+    background: #1e293b;
+    /* Чуть светлее при наведении */
+    border-color: #1e293b;
+}
+
+
+/* Бургер-меню */
+
+.burger-menu-wrapper {
+    position: relative;
+}
+
+.burger-btn {
+    background: transparent;
+    border: 1px solid #e2e8f0;
+    color: #0f172a;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.burger-btn:hover {
+    background: #f8fafc;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    z-index: 101;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    padding: 14px 20px;
+    color: #0f172a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f8fafc;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: #f8fafc;
+}
+
+
+/* АДАПТИВНОСТЬ */
+
+.mobile-nav-link,
+.mobile-divider {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .center-nav {
+        display: none;
+    }
+    .mobile-nav-link {
+        display: block !important;
+        font-weight: 600 !important;
+    }
+    .mobile-divider {
+        display: block;
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 4px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-container {
+        padding: 0 16px;
+    }
+    .logo-text {
+        display: none;
+    }
+    .auth-btn,
+    .guest-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    .avatar-link {
+        width: 38px;
+        height: 38px;
+    }
+}

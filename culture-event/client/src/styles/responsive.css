@@ -1,0 +1,29 @@
+/* client/src/styles/responsive.css */
+
+/* Утилиты для скрытия элементов на смартфонах */
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+/* Утилиты для скрытия элементов на планшетах и десктопах */
+@media (min-width: 768px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+/* Тонкая настройка типографики для мобильных устройств */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Чуть уменьшаем базовый размер шрифта для маленьких экранов */
+  }
+  
+  .container {
+    padding: 0 15px; /* Уменьшаем боковые отступы */
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+}

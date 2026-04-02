@@ -1,0 +1,390 @@
+/* ====================================
+   ОБЩИЕ СТИЛИ И СПИННЕР
+==================================== */
+.news-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding-bottom: 100px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f1f5f9;
+    border-top: 5px solid #0f172a;
+    border-radius: 50%;
+    margin: 50px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ПУСТОЕ СОСТОЯНИЕ */
+.empty-state {
+    text-align: center;
+    background: #ffffff;
+    padding: 80px 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    max-width: 700px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* ====================================
+   СТРАНИЦА НОВОСТЕЙ (СЕТКА)
+==================================== */
+.news-header-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.news-header-section h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: #0f172a;
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.news-header-section p {
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* СЕТКА НОВОСТЕЙ */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch; /* МАГИЯ 1: Одинаковая высота всех карточек в ряду */
+}
+
+/* КАРТОЧКА НОВОСТИ */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Занимает всю высоту */
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Картинка (фиксированный размер) */
+.news-image-wrapper {
+    width: 100%;
+    height: 220px;
+    background-color: #e2e8f0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.news-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.news-card:hover .news-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Контент карточки */
+.news-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* МАГИЯ 2: Растягивается и толкает кнопку вниз */
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 15px 0;
+    line-height: 1.4;
+}
+
+.news-snippet {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Кнопка "Читать подробнее" */
+.read-more-link {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: auto; /* МАГИЯ 3: Прижимает кнопку к самому низу */
+    align-self: flex-start;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    padding-bottom: 2px;
+}
+
+.news-card:hover .read-more-link {
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* ====================================
+   ДЕТАЛЬНАЯ СТРАНИЦА НОВОСТИ
+==================================== */
+.news-details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.news-hero {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.news-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15,23,42,0.95), rgba(15,23,42,0.3));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+.news-hero-content {
+    width: 100%;
+    max-width: 850px;
+    padding: 0 20px;
+}
+
+.news-hero-date {
+    background: #3b82f6;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.news-hero-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.news-content-card {
+    width: 100%;
+    max-width: 850px;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 60px;
+}
+
+.news-full-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 50px;
+}
+
+.news-full-text p {
+    margin-bottom: 20px;
+}
+
+.no-text {
+    color: #94a3b8;
+    font-style: italic;
+    text-align: center;
+}
+
+/* ====================================
+   КОММЕНТАРИИ
+==================================== */
+.comments-section {
+    border-top: 2px solid #f1f5f9;
+    padding-top: 40px;
+}
+
+.comments-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 25px;
+}
+
+.comment-form {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.comment-input-wrapper {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.comment-avatar-mini {
+    width: 45px;
+    height: 45px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.comment-form textarea:focus { border-color: #3b82f6; }
+
+.post-comment-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.post-comment-btn:hover { background: #2563eb; }
+.post-comment-btn:disabled { background: #94a3b8; cursor: not-allowed; }
+
+.login-to-comment {
+    background: #f1f5f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.comment-bubble {
+    display: flex;
+    gap: 15px;
+}
+
+.comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.comment-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.comment-body {
+    background: #f8fafc;
+    padding: 18px 20px;
+    border-radius: 0 16px 16px 16px;
+    border: 1px solid #e2e8f0;
+    flex-grow: 1;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-author { font-weight: 700; color: #0f172a; }
+.comment-date { font-size: 0.85rem; color: #94a3b8; }
+.comment-text { margin: 0; color: #334155; line-height: 1.6; font-size: 1rem; }
+
+@media (max-width: 768px) {
+    .news-hero-title { font-size: 1.8rem; }
+    .news-content-card { margin-top: -30px; padding: 25px; border-radius: 0; width: 100%; }
+}
+
+.delete-news-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s;
+}
+
+.delete-news-btn:hover {
+  background: #dc2626;
+}

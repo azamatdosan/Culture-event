@@ -1,0 +1,340 @@
+/* =========================================
+   ОСНОВНОЙ ФОН И ТИПОГРАФИКА
+========================================= */
+
+.home-page {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+/* =========================================
+   1. HERO СЕКЦИЯ (ГЛАВНЫЙ ЭКРАН)
+========================================= */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 75px);
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    /* Темно-синее затемнение фона */
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: clamp(20px, 8vw, 100px);
+}
+
+.hero-card {
+    background: #ffffff;
+    padding: clamp(40px, 6vw, 60px);
+    border-radius: 16px;
+    /* Более строгие углы */
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+.hero-title {
+    color: #0f172a !important;
+    /* Темно-синий заголовок */
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.hero-subtitle {
+    color: #475569 !important;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #0f172a;
+    /* Темно-синяя кнопка */
+    color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    border: 1px solid #0f172a;
+}
+
+.hero-btn:hover {
+    background-color: #ffffff;
+    color: #0f172a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   2. ПОЧЕМУ ВЫБИРАЮТ НАС
+========================================= */
+
+.features-section {
+    padding: clamp(80px, 8vw, 120px) 0;
+    background-color: #ffffff;
+}
+
+.section-title {
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    color: #0f172a;
+    margin-bottom: clamp(40px, 6vw, 60px);
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: left;
+    /* Текст слева выглядит более минималистично */
+    border: 1px solid #e2e8f0;
+    /* Тонкая рамка */
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.feature-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   3. АФИША (МЕРОПРИЯТИЯ)
+========================================= */
+
+.events-preview-section {
+    padding: clamp(80px, 8vw, 120px) 0;
+    background-color: #f8fafc;
+    /* Очень легкий серо-синий для отделения секций */
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   4. СТАТИСТИКА (О НАС)
+========================================= */
+
+.about-section {
+    background-color: #ffffff;
+    padding: clamp(80px, 8vw, 120px) 0;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-description {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.6;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #0f172a;
+    /* Темно-синие цифры */
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+}
+
+
+/* АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ */
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 0 20px;
+        justify-content: center;
+    }
+    .hero-card {
+        text-align: left;
+        padding: 30px 24px;
+    }
+    .feature-card {
+        text-align: center;
+    }
+}
+
+/* Скрываем цену и сердечки только на главной странице */
+.home-events-grid .event-price,
+.home-events-grid .favorite-btn {
+    display: none !important;
+}
+
+/* Настраиваем сетку, чтобы 6 карточек смотрелись ровно */
+/* Сетка мировых событий строго по 3 в ряд */
+.home-events-grid {
+    display: grid;
+    /* Вместо auto-fill ставим строго 3 колонки */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1200px; /* Чтобы сетка не разъезжалась слишком широко */
+    margin: 0 auto;    /* Центрируем саму сетку */
+}
+
+/* Адаптив: чтобы на планшетах было по 2, а на телефонах по 1 */
+@media (max-width: 1024px) {
+    .home-events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .home-events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Скрываем всё лишнее (повторим на всякий случай) */
+.home-events-grid .event-price, 
+.home-events-grid .favorite-btn,
+.home-events-grid .event-date,
+.home-events-grid .event-footer { 
+    display: none !important; 
+}
+
+/* Делаем заголовок чуть больше, раз карточки стали шире */
+.home-events-grid .event-title {
+    font-size: 1.5rem !important;
+    margin: 15px 0 !important;
+}
+
+/* Чтобы дата и категория не "прилипали" к низу без цены */
+.home-events-grid .event-footer {
+    border-top: none;
+    padding-top: 0;
+    justify-content: flex-start;
+}
+
+/* Скрываем всё лишнее только в сетке на главной странице */
+.home-events-grid .event-price, 
+.home-events-grid .favorite-btn,
+.home-events-grid .event-date,
+.home-events-grid .event-footer span:first-child { 
+    display: none !important; 
+}
+
+/* Убираем лишние отступы и линии в нижней части карточки */
+.home-events-grid .event-footer {
+    border-top: none !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    display: none !important; /* Полностью скрываем нижнюю полоску, если там пусто */
+}
+
+/* Добавим немного отступа снизу заголовку, чтобы карточка не выглядела обрубленной */
+.home-events-grid .event-title {
+    margin-bottom: 20px !important;
+}

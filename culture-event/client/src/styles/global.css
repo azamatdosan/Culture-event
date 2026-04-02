@@ -1,0 +1,72 @@
+/* client/src/styles/global.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+/* Главный контейнер для ограничения ширины контента.
+  Обеспечивает отличный внешний вид на больших 4K мониторах.
+*/
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Базовые стили для заголовков (Иерархия шрифтов) */
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* Кастомный скроллбар для эстетики (необязательно, но добавляет стиля) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Полностью убираем дефолтные отступы браузера */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Жестко запрещаем горизонтальный скролл */
+}
+
+/* Убираем отступы у главного контейнера */
+.main-content {
+  padding: 0 !important; 
+  margin: 0 !important;
+  width: 100%;
+}
+
+.auth-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}

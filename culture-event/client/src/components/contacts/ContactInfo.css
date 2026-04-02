@@ -1,0 +1,43 @@
+.contact-info {
+  padding: 40px;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 24px;
+  height: 100%;
+}
+
+.contact-info__title {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.contact-info__item {
+  margin-bottom: 18px;
+}
+
+.contact-info__label {
+  display: block;
+  font-size: 14px;
+  color: #caa84a;
+  margin-bottom: 6px;
+}
+
+.contact-info a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  opacity: 0.7;
+}
+
+/* 📱 АДАПТИВ */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 24px;
+  }
+
+  .contact-info__title {
+    font-size: 24px;
+  }
+}

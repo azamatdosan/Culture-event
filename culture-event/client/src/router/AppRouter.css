@@ -1,0 +1,21 @@
+/* Обертка для контента маршрутов */
+.page-transition-wrapper {
+  /* Занимает всю доступную высоту между Header и Footer */
+  min-height: calc(100vh - 140px); /* Примерно вычитаем высоту шапки и подвала */
+  display: flex;
+  flex-direction: column;
+  
+  /* Простая анимация появления страницы */
+  animation: fadeInRoute 0.3s ease-in-out;
+}
+
+@keyframes fadeInRoute {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

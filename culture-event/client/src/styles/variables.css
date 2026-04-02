@@ -1,0 +1,36 @@
+/* client/src/styles/variables.css */
+:root {
+  /* Цветовая палитра (Гармоничная схема) */
+  --primary-color: #0056b3;
+  --primary-hover: #004494;
+  --secondary-color: #e9ecef;
+  --background-color: #f8f9fa;
+  --surface-color: #ffffff;
+  
+  /* Текст и типографика (Контрастность и читаемость) */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  --text-light: #ffffff;
+  
+  /* Семантические цвета (Ошибки, успехи) */
+  --danger-color: #dc3545;
+  --danger-bg: #fee2e2;
+  --success-color: #28a745;
+  --success-bg: #d4edda;
+  
+  /* Границы и тени */
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Отступы и скругления */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 40px;
+}

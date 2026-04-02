@@ -1,0 +1,25 @@
+.news-list {
+  display: grid;
+  /* Автоматическая сетка: колонки не меньше 300px, максимум - сколько влезет */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.news-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 1.1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+/* Дополнительная адаптивность для совсем маленьких экранов */
+@media (max-width: 480px) {
+  .news-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

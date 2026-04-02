@@ -1,0 +1,86 @@
+.favorites-page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  min-height: 80vh;
+}
+
+.favorites-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.favorites-header h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.favorites-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Сетка для карточек (автоматически подстраивается под экран) */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* =========================================
+   ПУСТОЕ СОСТОЯНИЕ (КОГДА НЕТ СОБЫТИЙ)
+========================================= */
+.empty-favorites {
+  text-align: center;
+  padding: 80px 20px;
+  background: #ffffff;
+  border-radius: 24px;
+  border: 2px dashed #e2e8f0;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.empty-favorites .empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  animation: float 3s ease-in-out infinite;
+}
+
+.empty-favorites h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.empty-favorites p {
+  color: #64748b;
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+.go-to-events-btn {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.go-to-events-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Анимация для сердечка */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}

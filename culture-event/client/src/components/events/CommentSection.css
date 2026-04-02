@@ -1,0 +1,52 @@
+.comment-section {
+  margin-top: 40px;
+}
+
+.comment-section__container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* блок формы */
+.comment-section__form {
+  position: sticky;
+  top: 20px;
+}
+
+/* блок списка */
+.comment-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 📱 TABLET */
+@media (max-width: 1024px) {
+  .comment-section__container {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-section__form {
+    position: static;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .comment-section {
+    margin-top: 28px;
+  }
+
+  .comment-section__container {
+    gap: 20px;
+  }
+}
+
+/* 📱 SMALL MOBILE */
+@media (max-width: 480px) {
+  .comment-section {
+    margin-top: 20px;
+  }
+}
